@@ -1,0 +1,31 @@
+<div class="d-flex flex-column align-content-center align-items-center justify-content-center align-self-center" id="logInContainer">
+    <h1 class="p-2">Codigo Azul</h1>
+    <form [formGroup]="formularioLogIn">
+        <div class="p-2">
+            <label>Email</label>
+            <input type="email" 
+            placeholder="ejemplo@gmail.com" 
+            required 
+            class="form-control" 
+            formControlName="email">
+        </div>
+        <br>
+        <div class="p-2">
+            <label>Contraseña</label>
+            <input type="password" 
+            placeholder="contraseña" 
+            required class="form-control" 
+            formControlName="password">
+        </div>
+        <br>
+        <div>        
+            <input type="checkbox"
+            formControlName="mantenerSesion">
+            <label>Mantener sesión iniciada</label>
+        </div>
+    </form>
+    <br>
+    <div class="d-flex">
+    <button class="btn btn-primary" type="submit" (click)="adminLogIn()">Iniciar Sesion</button>
+    </div>
+</div>
