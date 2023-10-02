@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+.contenedor-dashboard{
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgba(241, 241, 241, 0.8);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    overflow: auto;
+    flex-wrap: wrap;
+}
+
+th, td{
+    width: fit-content;
+    border-bottom: 1px solid #ffffffc9;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+
+.perfil{
+    size: 512px;
+    padding-bottom: 25px;
+}
+
+.titulo {
+    width: fit-content;
+}
+
+.grafico{
+    min-width: 0;
+    min-height: 0;
+}

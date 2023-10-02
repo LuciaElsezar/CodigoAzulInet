@@ -18,7 +18,7 @@ export class LogInComponent {
     if(this.formularioLogIn.valid){
       if(this.formularioLogIn.controls['email'].value == "escuela713@gmail.com" &&
       this.formularioLogIn.controls['password'].value == "12345678"){
-        this.router.navigateByUrl("");
+        this.router.navigateByUrl("/dashboard-admin");
       }
     }
   }

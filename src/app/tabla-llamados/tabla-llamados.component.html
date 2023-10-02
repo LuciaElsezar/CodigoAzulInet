@@ -1,0 +1,193 @@
+<div class="div">
+    <div class="contenedor-dashboard titulo">
+        <h1>Llamados</h1>
+    </div>
+	<br>
+    <div class="d-flex p-3 contenedor-dashboard" id="tablaLlamados">
+        <table class="table-responsive">
+            <tr>
+                <th class="h5">Fecha</th>
+                <th class="h5">Hora</th>
+                <th class="h5">Sala de Origen</th>
+                <th class="h5">Tipo de Llamado</th>
+				<th class="h5">Atendido</th>
+            </tr>
+			<tr>
+				<td>02-11-23</td>
+				<td>6:13:27</td>
+				<td>Suspendisse non</td>
+				<td>Normal</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>09-11-23</td>
+				<td>17:50:00</td>
+				<td>convallis est,</td>
+				<td>Emergencia</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>08-11-23</td>
+				<td>19:21:26</td>
+				<td>tempus, lorem fringilla</td>
+				<td>Emergencia</td>
+				<td>no</td>
+			</tr>
+			<tr>
+				<td>07-11-23</td>
+				<td>9:55:37</td>
+				<td>ipsum. Suspendisse</td>
+				<td>Emergencia</td>
+				<td>no</td>
+			</tr>
+			<tr>
+				<td>09-11-23</td>
+				<td>1:26:41</td>
+				<td>ornare,</td>
+				<td>Emergencia</td>
+				<td>no</td>
+			</tr>
+			<tr>
+				<td>11-11-23</td>
+				<td>7:31:15</td>
+				<td>senectus et</td>
+				<td>Normal</td>
+				<td>no</td>
+			</tr>
+			<tr>
+				<td>03-11-23</td>
+				<td>11:40:39</td>
+				<td>vitae, erat.</td>
+				<td>Emergencia</td>
+				<td>no</td>
+			</tr>
+			<tr>
+				<td>04-11-23</td>
+				<td>18:44:12</td>
+				<td>fames</td>
+				<td>Emergencia</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>02-11-23</td>
+				<td>17:40:34</td>
+				<td>nec, malesuada ut,</td>
+				<td>Normal</td>
+				<td>no</td>
+			</tr>
+			<tr>
+				<td>10-11-23</td>
+				<td>2:41:37</td>
+				<td>facilisi. Sed neque.</td>
+				<td>Normal</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>13-11-23</td>
+				<td>10:00:58</td>
+				<td>faucibus leo,</td>
+				<td>Emergencia</td>
+				<td>no</td>
+			</tr>
+			<tr>
+				<td>06-11-23</td>
+				<td>1:33:16</td>
+				<td>elit. Curabitur sed</td>
+				<td>Emergencia</td>
+				<td>no</td>
+			</tr>
+			<tr>
+				<td>10-11-23</td>
+				<td>17:08:20</td>
+				<td>fermentum</td>
+				<td>Normal</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>15-11-23</td>
+				<td>19:23:10</td>
+				<td>arcu. Vivamus</td>
+				<td>Emergencia</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>07-11-23</td>
+				<td>1:13:06</td>
+				<td>tempor diam dictum</td>
+				<td>Emergencia</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>06-11-23</td>
+				<td>4:57:24</td>
+				<td>risus.</td>
+				<td>Emergencia</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>02-11-23</td>
+				<td>17:21:12</td>
+				<td>Ut sagittis lobortis</td>
+				<td>Emergencia</td>
+				<td>no</td>
+			</tr>
+			<tr>
+				<td>03-11-23</td>
+				<td>12:19:46</td>
+				<td>rhoncus.</td>
+				<td>Emergencia</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>14-11-23</td>
+				<td>14:31:54</td>
+				<td>commodo ipsum.</td>
+				<td>Emergencia</td>
+				<td>si</td>
+			</tr>
+			<tr>
+				<td>06-11-23</td>
+				<td>12:37:39</td>
+				<td>cubilia Curae</td>
+				<td>Emergencia</td>
+				<td>no</td>
+			</tr>
+			<tr>
+<!--			<form [formGroup]="formularioLlamado">-->	
+					<td>
+						<input type="date" 
+						placeholder="Fecha" 
+						class="form-control" 
+						formControlName="fecha">
+					</td>
+					<td>
+						<input type="time"
+						placeholder="Hora"
+						class="form-control"
+						formControlName="hora">
+					</td>
+					<td>
+						<input type="text"
+						placeholder="Sala"
+						class="form-control"
+						formControlName="salaLlamado">
+					</td>
+					<td>
+						<input type="text"
+						placeholder="Tipo"
+						class="form-control"
+						formControlName="tipoLlamado">
+					</td>
+					<td>
+						<input type="text"
+						placeholder="Atendido"
+						class="form-control"
+						formControlName="atendido">
+					</td>
+<!--			</form>-->
+			</tr>
+        </table>
+    </div>
+    <button class="btn contenedor-dashboard" type="submit">Añadir Llamado</button>
+    <button class="btn contenedor-dashboard" type="submit">Buscar Llamado</button>
+</div>
