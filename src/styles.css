@@ -45,3 +45,11 @@ th, td{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.input-error{
+    border-left:2px crimson solid;
+}
+
+.input-touched{
+    border-left:2px darkorange solid;
+}

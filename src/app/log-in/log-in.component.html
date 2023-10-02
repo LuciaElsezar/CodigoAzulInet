@@ -1,27 +1,39 @@
 <div id="fondo">
 </div>
 
-<div class="d-flex flex-column align-content-center align-items-center justify-content-center align-self-center" id="logInContainer">
+<div class="d-flex flex-column align-content-center align-items-center justify-content-center align-self-center contenedor-dashboard" id="logInContainer">
     <h1 class="p-2">Codigo Azul</h1>
-    <form [formGroup]="formularioLogIn">
+    <form [formGroup]="logInForm">
         <div class="p-2">
             <label>Email</label>
             <input type="email" 
             placeholder="ejemplo@gmail.com" 
             required 
             class="form-control" 
-            formControlName="email">
+            formControlName="email"
+            [class.is-invalid]="logInForm.get('email')?.touched && 
+            logInForm.get('email')?.errors?.['required']">
         </div>
+        <div class="alert alert-danger" *ngIf="logInForm.get('email')?.touched && 
+        logInForm.get('email')?.errors?.['required']">Rellenar este campo</div>
+        <div class="alert alert-danger" *ngIf="logInForm.get('email')?.touched && 
+        logInForm.get('email')?.errors?.['email']">Ingresar un email valido</div>
         <br>
         <div class="p-2">
             <label>Contraseña</label>
             <input type="password" 
             placeholder="contraseña" 
             required class="form-control" 
-            formControlName="password">
+            formControlName="password"
+            [class.is-invalid]="logInForm.get('password')?.touched && 
+            logInForm.get('password')?.errors?.['required']">
         </div>
+        <div class="alert alert-danger" *ngIf="logInForm.get('password')?.touched && 
+        logInForm.get('password')?.errors?.['required']">Rellenar este campo</div>
+        <div class="alert alert-danger" *ngIf="logInForm.get('password')?.touched && 
+        logInForm.get('password')?.errors?.['minlength']">La contraseña tiene que ser de al menos {{logInForm.get('password')?.errors?.['minlength'].requiredLength}} caracteres</div>
         <br>
-        <div>        
+        <div class="text-center">        
             <input type="checkbox"
             formControlName="mantenerSesion">
             <label>Mantener sesión iniciada</label>
@@ -29,6 +41,6 @@
     </form>
     <br>
     <div class="d-flex">
-    <button class="btn btn-primary" type="submit" (click)="adminLogIn()">Iniciar Sesion</button>
+    <button class="btn contenedor-dashboard" type="submit" (click)="logIn()" [class.disabled]="logInForm.invalid">Iniciar Sesion</button>
     </div>
 </div>
